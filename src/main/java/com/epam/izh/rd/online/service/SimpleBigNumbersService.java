@@ -25,7 +25,7 @@ public class SimpleBigNumbersService implements BigNumbersService {
      */
     @Override
     public BigInteger getPrimaryNumber(int range) {
-        BigInteger result = BigInteger.valueOf(2);
+        BigInteger result = BigInteger.valueOf(2); //в тесте ожидается число 547, но 100е простое число, если учитывать число 2, это - 541
         while (range > 0) {
             result = result.add(BigInteger.ONE);
             if (result.isProbablePrime(100)) {
